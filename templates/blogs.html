@@ -1,0 +1,10 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Blogs Page{% endblock %}
+{% block 'content' %}
+{% for i in data %}
+<h3>{{i.Title}}</h3>
+<h6>By:-{{i.Author_name.Name}}</h6>
+<p>{{i.Content}}</p>
+{% endfor %}
+{% endblock %}      

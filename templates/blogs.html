@@ -4,7 +4,7 @@
 {% block 'content' %}
 {% for i in data %}
 <h3>{{i.Title}}</h3>
-<h6>By:-{{i.Author_name.Name}}</h6>
+<h6>By:-{{i.Author_name.username}}</h6>
 <p>{{i.Content}}</p>
 {% endfor %}
 {% endblock %}      

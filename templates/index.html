@@ -2,9 +2,16 @@
 {% load static %}
 {% block 'title' %}Home Page{% endblock %}
 {% block 'content' %}
-<div class="span3">
-          <div class="well box aligncenter" style="height:100px;">
+<div class="row">
+    <div class="span3">
+        <div class="well box aligncenter" style="height:100px;">
               <a href="{% url 'blogs' %}" class="btn btn-color" style="padding:35px;margin:5px;font-size:24px;">Blogs</a>
-          </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="well box aligncenter" style="height:100px;">
+              <a href="{% url 'addblogs' %}" class="btn btn-color" style="padding:35px;margin:5px;font-size:24px;">Add Blogs</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

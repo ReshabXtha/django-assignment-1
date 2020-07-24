@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Login Page{% endblock %}
+{% block 'content' %}
+<h2>Login page</h2>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Login</button>
+    Don't have account?<a href="{% url 'signup' %}">Signup</a>
+
+</form>
+{% endblock %}

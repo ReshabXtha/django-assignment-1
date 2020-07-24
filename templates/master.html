@@ -26,7 +26,10 @@
     <!-- start top -->
     <div id="topnav" class="navbar navbar-fixed-top default">
         <div class="navbar-inner">
-
+            <div class="container">
+                <h3 style="text-align:right;color:orange;padding:20px;">Welcome {{request.user.username}}/<a href="{%url 'logout'%}">Logout..</a></h3>
+                <!--/.nav-collapse -->
+            </div>
                 <!--/.nav-collapse -->
 
         </div>

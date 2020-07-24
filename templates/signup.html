@@ -1,0 +1,10 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block 'title' %}Signup Page{% endblock %}
+{% block 'content' %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Signup</button>
+</form>
+{% endblock %}

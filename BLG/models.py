@@ -1,23 +1,17 @@
 from django.db import models
 from datetime import datetime
+from user.models import Profile
 
 
 # Create your models here.
-class Author(models.Model):
-    Name = models.CharField(max_length=50)
-    Address = models.CharField(max_length=30)
-    Contact = models.CharField(max_length=20, blank=True)
-
-    def __str__(self):
-        return str(self.Name)
 
 
 class Blog(models.Model):
     Title = models.CharField(max_length=30)
-    Created_at = models.DateTimeField(default=datetime.now())
-    Updated_at = models.DateTimeField(default=None, blank=True)
-    Author_name = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
+    Created_at = models.DateTimeField(auto_now_add=True)
+    Updated_at = models.DateTimeField(auto_now=True)
+    Author_name = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     Content = models.TextField()
 
     def __str__(self):
-        return str(self.Title)
+        return '{}    {}    {}'.format(self.Title,self.Created_at,self.Updated_at)
